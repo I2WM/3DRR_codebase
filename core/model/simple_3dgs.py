@@ -1,4 +1,4 @@
-# Copyright (c) Xuangeng Chu (xg.chu@outlook.com)
+# Copyright (c) Xuangeng Chu (xchu.contact@gmail.com)
 
 import torch
 import torch.nn as nn

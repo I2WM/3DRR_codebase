@@ -1,6 +1,6 @@
 DATASET:
   NAME: 'GearWorks'
-  DATA_PATH: '/root/workspace/example_data/development/GearWorks'
+  DATA_PATH: '/data/development/GearWorks'
   BACKGROUND_COLOR: 255.0
 
 MODEL:

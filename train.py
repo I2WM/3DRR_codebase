@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) Xuangeng Chu (xg.chu@outlook.com)
+# Copyright (c) Xuangeng Chu (xchu.contact@gmail.com)
 
 import argparse
 import math
@@ -10,11 +10,12 @@ import warnings
 import gsplat
 import torch
 import yaml
+from torchvision.utils import make_grid, save_image
+from tqdm import tqdm
+
 from core.data import Blender
 from core.libs import ConfigDict, ssim
 from core.model import Simple3DGS
-from torchvision.utils import make_grid, save_image
-from tqdm import tqdm
 
 
 def gamma_augment(image, gamma=0.5):

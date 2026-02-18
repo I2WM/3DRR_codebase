@@ -1,6 +1,6 @@
 DATASET:
   NAME: 'Cupcake'
-  DATA_PATH: '/root/workspace/example_data/development/Cupcake'
+  DATA_PATH: '/data/development/Cupcake'
   BACKGROUND_COLOR: 255.0
 
 MODEL:

@@ -1,6 +1,6 @@
 DATASET:
-  NAME: 'Chocolate'
-  DATA_PATH: '/root/workspace/example_data/development/Chocolate'
+  NAME: 'Laboratory'
+  DATA_PATH: '/data/development/Laboratory'
   BACKGROUND_COLOR: 255.0
 
 MODEL:

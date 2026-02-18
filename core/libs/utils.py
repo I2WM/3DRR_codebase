@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Copyright (c) Xuangeng Chu (xg.chu@outlook.com)
+# Copyright (c) Xuangeng Chu (xchu.contact@gmail.com)
 
 import os
 import random
