@@ -18,9 +18,16 @@ from core.libs import ConfigDict, ssim
 from core.model import Simple3DGS
 
 
+# ====================== LOW-LIGHT ENHANCEMENT (GAMMA AUGMENT) ===================
+# This helper applies a gamma correction (gamma < 1 brightens dark regions),
+# used as a simple *low-light enhancement* during training.
+# ================================================================================
+
 def gamma_augment(image, gamma=0.5):
     enhanced = torch.clamp(image, 0, 1).pow(gamma)
     return enhanced
+
+# --------------------------------------------------------------------------------
 
 
 def train(config_path, device="cuda"):
@@ -88,7 +95,13 @@ def train(config_path, device="cuda"):
 
         # sample random training image
         data = train_dataset[random.randint(0, num_train - 1)]
+
+        # ====================== LOW-LIGHT ENHANCEMENT ======================
+        # > TODO:: change this simple implementation
+        
         gt_image = gamma_augment(data["images"].to(device))  # (3, H, W)
+        # ===================================================================
+
         camtoworld = data["transforms"].to(device)  # (3, 4)
         H, W = gt_image.shape[1], gt_image.shape[2]
 
